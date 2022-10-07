@@ -1,7 +1,6 @@
+import PropTypes from 'prop-types';
 export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
     onLeaveFeedback = 1
-    // .setState
-    // const { good, neutral, bad } = onLeaveFeedback;
     return (
         <div>
             <button onClick={options}>Good</button>
@@ -10,3 +9,8 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
         </div>
     )
 }
+
+FeedbackOptions.propTypes = {
+    options: PropTypes.func,
+    onLeaveFeedback: PropTypes.bool
+  };
